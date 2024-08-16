@@ -1,0 +1,178 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body {
+    background-color: hsl(30, 18%, 87%);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: hsl(30, 10%, 34%);
+        font-family: Outfit, sans-serif;
+
+  }
+
+  .card {
+    background-color: white;
+    width: 750px;
+    border-radius: 25px;
+    margin: 100px auto;
+    padding: 40px;
+  }
+
+#img {
+    border-radius: 10px;
+    display: block;
+
+}
+
+h1, h2 {
+    font-family: Young Serif, sans-serif;
+    color: hsl(24, 5%, 18%);
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+}
+
+.prep {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+
+li {
+    padding: 5px 0 0 15px;
+   
+}
+
+li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+ol > li::marker {
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+  }
+
+ul {
+    padding-left: 25px;
+}
+
+h1 {
+    padding: 25px 0;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+hr {
+    margin: 30px auto;
+    border-top: hsl(30, 18%, 87%);
+}
+
+.stat {
+    font-weight: 700;
+    color: hsl(332, 51%, 32%);
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 20px;
+}
+
+.table > div {
+  
+  border-bottom: 1px solid #ddd; 
+  border-top-width: 1px;
+  
+}
+
+.table > div:last-child { 
+  border-bottom: 0px;
+}
+
+.trow  {
+   display: flex;
+   flex-direction: row;
+   display: grid;
+   padding: 2px;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .card {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+
+  }
+  #img {
+    border-radius: 0;
+  }
+
+  .innercard {
+    padding: 0 30px 30px 30px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+
+
+}
